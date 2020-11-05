@@ -3,4 +3,12 @@
 def run_guessing_game
   random_number = rand(1..6)
   input = gets.chomp
+  case input
+  when random_number
+    puts "You guessed the correct number!"
+  when "exit"
+    puts "Goodbye!"
+  else 
+    puts "Sorry! The computer guessed <number>."
+  end
 end
